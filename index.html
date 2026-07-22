@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Veda in Glass | Envidraçamento de Sacadas Premium com 5 Anos de Garantia</title>
+    <meta name="description" content="Especialistas em Envidraçamento de Sacadas, Cortina de Vidro e Coberturas. Vedação tripla anti-chuva, isolamento acústico e até 12x no cartão. Peça seu orçamento grátis!">
+    <meta name="keywords" content="envidraçamento de sacadas, cortina de vidro, fechamento de varanda, cobertura de vidro, veda in glass, vidraçaria">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Envidraçamento de Sacadas Premium | Grupo Veda in Glass">
+    <meta property="og:description" content="Proteja sua sacada contra chuva, vento e barulho com o melhor sistema de envidraçamento do mercado. Orçamento em 15min no WhatsApp!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.grupovedainglass.com.br/">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- GSAP for Smooth Spatial Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Tag (gtag.js) - Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18326501854"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18326501854');
+
+      // Function to report conversion on WhatsApp button clicks
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.open(url, '_blank');
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18326501854/Zop5CIC-ntIcEN7z4KJE',
+            'event_callback': callback
+        });
+        setTimeout(callback, 400);
+        return false;
+      }
+    </script>
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <span class="pulse-badge"><span class="pulse-dot"></span> Atendimento Rápido via WhatsApp</span>
+            <span class="top-bar-text">🔥 Condições Especiais de Envidraçamento nesta Semana: <strong>Parcele em até 12x Sem Juros!</strong></span>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Topo Bar Banner')" class="top-bar-link">Garantir Oferta &rarr;</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="container header-container">
+            <a href="#" class="logo-area">
+                <!-- User Provided Official Veda in Glass Logo -->
+                <img src="assets/logo.png" alt="Grupo Veda in Glass Logotipo Oficial" class="brand-logo-img">
+            </a>
+
+            <div class="header-badges desktop-only">
+                <div class="badge-item">
+                    <span class="star-rating">★★★★★</span>
+                    <span><strong>4.9/5</strong> no Google (480+ avaliações)</span>
+                </div>
+                <div class="badge-item">
+                    <span class="shield-icon">🛡️</span>
+                    <span>Garantia de <strong>5 Anos</strong></span>
+                </div>
+            </div>
+
+            <div class="header-cta">
+                <a href="javascript:void(0)" onclick="openWhatsApp('Header Desktop')" class="btn btn-whatsapp header-btn">
+                    <svg class="whatsapp-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Orçamento Rápido</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-grid">
+            <!-- Hero Left Text Column -->
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="sparkle">✨</span> Sistema de Vedação de Alta Performance
+                </div>
+
+                <h1 class="hero-title">
+                    Transforme sua Sacada em um Espaço <span class="highlight-text">Premium, Protegido e Elegante</span>
+                </h1>
+
+                <p class="hero-description">
+                    Envidraçamento de Sacadas com <strong>Vedação Tripla Anti-Chuva</strong>, isolamento acústico e desfrute do seu espaço o ano inteiro. Segurança máxima para sua família com <strong>5 anos de garantia blindada</strong>.
+                </p>
+
+                <!-- CRO Call to Action Box -->
+                <div class="hero-action-box">
+                    <a href="javascript:void(0)" onclick="openWhatsApp('Hero Principal')" class="btn btn-primary-glow btn-lg btn-block">
+                        <svg class="whatsapp-icon-lg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                        </svg>
+                        <span>SOLICITAR ORÇAMENTO NO WHATSAPP</span>
+                    </a>
+                    <p class="hero-cta-subtext">⚡ Resposta média em <strong>15 minutos</strong> | Sem compromisso</p>
+                </div>
+
+                <!-- Trust Micro-Badges -->
+                <div class="hero-trust-grid">
+                    <div class="trust-pill">
+                        <span class="icon">✅</span>
+                        <span>Medição Técnica Grátis</span>
+                    </div>
+                    <div class="trust-pill">
+                        <span class="icon">💳</span>
+                        <span>Em até 12x no Cartão</span>
+                    </div>
+                    <div class="trust-pill">
+                        <span class="icon">🏆</span>
+                        <span>+3.500 Obras Entregues</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Right Visual - High Quality Photo Card -->
+            <div class="hero-visual">
+                <div class="antigravity-card-hero glass-panel">
+                    <div class="hero-visual-badge">PROJETO DE ALTO PADRÃO ENTREGUE</div>
+                    
+                    <div class="hero-photo-container">
+                        <img src="assets/hero_balcony_glass.jpg" alt="Envidraçamento de Sacadas Veda in Glass" class="hero-photo">
+                    </div>
+
+                    <div class="hero-visual-footer">
+                        <div class="stat-box">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">Proteção Contra Chuva</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-box">
+                            <span class="stat-num">-70%</span>
+                            <span class="stat-label">Redução de Barulho</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-box">
+                            <span class="stat-num">5 ANOS</span>
+                            <span class="stat-label">Garantia Total</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROOF / SOCIAL REASSURANCE STRIP -->
+    <section class="proof-bar">
+        <div class="container proof-grid">
+            <div class="proof-item">
+                <div class="proof-icon">🏢</div>
+                <div class="proof-text">
+                    <strong>Aprovado em Condomínios</strong>
+                    <span>Adequado às normas de fachada</span>
+                </div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-icon">🌧️</div>
+                <div class="proof-text">
+                    <strong>Vedação Anti-Vazamento</strong>
+                    <span>Sistema triplo de silicone & escovas</span>
+                </div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-icon">🛡️</div>
+                <div class="proof-text">
+                    <strong>Vidro Temperado ABNT</strong>
+                    <span>Resistência extrema a ventos fortes</span>
+                </div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-icon">⚙️</div>
+                <div class="proof-text">
+                    <strong>Roldanas em Aço Inox</strong>
+                    <span>Deslize suave sem enroscar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE BUDGET SIMULATOR (CALCULADORA DE ENVIDRAÇAMENTO) -->
+    <section class="simulator-section" id="simulador">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">SIMULADOR EXPRESS</span>
+                <h2 class="section-title">Calcule a Estimativa para sua Sacada em 3 Passos</h2>
+                <p class="section-subtitle">Descubra em segundos o formato ideal e envie os dados direto para nosso técnico via WhatsApp.</p>
+            </div>
+
+            <div class="simulator-card glass-panel antigravity-depth">
+                <div class="sim-steps-indicator">
+                    <div class="step-badge active" id="step1Indicator">1. Formato</div>
+                    <div class="step-line"></div>
+                    <div class="step-badge" id="step2Indicator">2. Medidas</div>
+                    <div class="step-line"></div>
+                    <div class="step-badge" id="step3Indicator">3. Resultado</div>
+                </div>
+
+                <!-- STEP 1: FORMAT -->
+                <div class="sim-step-content" id="step1Content">
+                    <h3 class="sim-step-title">Qual é o formato da sua sacada?</h3>
+                    <div class="format-options-grid">
+                        <label class="format-card selected" onclick="selectFormat('reta', this)">
+                            <input type="radio" name="format" value="reta" checked hidden>
+                            <div class="format-svg">
+                                <svg width="60" height="40" viewBox="0 0 60 40"><line x1="5" y1="20" x2="55" y2="20" stroke="#00E5FF" stroke-width="4" stroke-linecap="round"/></svg>
+                            </div>
+                            <strong>Sacada Reta</strong>
+                            <span>Linha única de vidros</span>
+                        </label>
+                        <label class="format-card" onclick="selectFormat('l', this)">
+                            <input type="radio" name="format" value="l" hidden>
+                            <div class="format-svg">
+                                <svg width="60" height="40" viewBox="0 0 60 40"><path d="M10 5 V30 H50" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" fill="none"/></svg>
+                            </div>
+                            <strong>Sacada em "L"</strong>
+                            <span>Duas faces / canto</span>
+                        </label>
+                        <label class="format-card" onclick="selectFormat('curva', this)">
+                            <input type="radio" name="format" value="curva" hidden>
+                            <div class="format-svg">
+                                <svg width="60" height="40" viewBox="0 0 60 40"><path d="M10 30 Q30 5 50 30" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" fill="none"/></svg>
+                            </div>
+                            <strong>Sacada Curva / U</strong>
+                            <span>Múltiplas faces</span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-next" onclick="goToStep(2)">Avançar para Medidas &rarr;</button>
+                </div>
+
+                <!-- STEP 2: MEASUREMENTS -->
+                <div class="sim-step-content hidden" id="step2Content">
+                    <h3 class="sim-step-title">Insira o comprimento aproximado da sacada</h3>
+                    <div class="measures-inputs">
+                        <div class="input-group">
+                            <label for="compInput">Comprimento total (metros):</label>
+                            <input type="number" id="compInput" min="1" max="30" step="0.5" value="4.0" class="sim-input" onchange="calculateEstimate()">
+                        </div>
+                        <div class="input-group">
+                            <label for="glassType">Cor do Vidro Desejada:</label>
+                            <select id="glassType" class="sim-input" onchange="calculateEstimate()">
+                                <option value="Incolor (Mais Escolhido)">Incolor (Mais Escolhido)</option>
+                                <option value="Fumê Elegante">Fumê Elegante</option>
+                                <option value="Verde Soft">Verde Soft</option>
+                                <option value="Refletivo Premium">Refletivo Premium</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-secondary" onclick="goToStep(1)">&larr; Voltar</button>
+                        <button type="button" class="btn btn-primary" onclick="goToStep(3)">Ver Estimativa &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: RESULT & WHATSAPP DIRECT ACTION -->
+                <div class="sim-step-content hidden" id="step3Content">
+                    <div class="result-box">
+                        <div class="result-badge">⚡ SIMULAÇÃO CONCLUÍDA</div>
+                        <h3 id="resultTitle">Sacada Reta de ~4.0 metros</h3>
+                        <p class="result-desc">Configuração ideal: Sistema Retrátil de Envidraçamento com Vedação Tripla em Vidro Temperado 8mm/10mm.</p>
+
+                        <div class="result-values">
+                            <div class="val-card">
+                                <span class="val-label">Parcelamento estimado em até:</span>
+                                <span class="val-highlight">12x Sem Juros</span>
+                            </div>
+                            <div class="val-card">
+                                <span class="val-label">Prazo estimado de instalação:</span>
+                                <span class="val-highlight">Rápido & Agendado</span>
+                            </div>
+                        </div>
+
+                        <div class="result-cta-box">
+                            <p><strong>Deseja receber o valor exato no seu WhatsApp agora?</strong></p>
+                            <button type="button" class="btn btn-whatsapp-glow btn-lg btn-block" onclick="sendSimulatedBudget()">
+                                <svg class="whatsapp-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                </svg>
+                                ENVIAR SIMULAÇÃO PARA CONSULTOR VIA WHATSAPP
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE BEFORE & AFTER COMPARISON SLIDER WITH REAL PHOTOS -->
+    <section class="before-after-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">TRANSFORMAÇÃO REAL</span>
+                <h2 class="section-title">Veja a Diferença Antes e Depois do Envidraçamento</h2>
+                <p class="section-subtitle">Arraste o divisor para comparar o ambiente exposto x ambiente protegido com Grupo Veda in Glass.</p>
+            </div>
+
+            <div class="ba-slider-container glass-panel">
+                <div class="ba-image ba-before">
+                    <div class="ba-label label-before">⚠️ SEM ENVIDRAÇAMENTO (Chuva e Vento)</div>
+                    <img src="assets/before_balcony_open.jpg" alt="Sacada sem Envidraçamento" class="ba-photo">
+                </div>
+                <div class="ba-image ba-after" id="baAfter">
+                    <div class="ba-label label-after">✨ COM GRUPO VEDA IN GLASS (Protegido e Elegante)</div>
+                    <img src="assets/hero_balcony_glass.jpg" alt="Sacada Envidraçada Veda in Glass" class="ba-photo">
+                </div>
+                <div class="ba-handle" id="baHandle">
+                    <div class="ba-handle-line"></div>
+                    <div class="ba-handle-button">
+                        <span>&#10094;&#10095;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANTIGRAVITY DIFFERENTIALS (FLOATING GLASS CARDS) -->
+    <section class="differentials-section" id="diferenciais">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">POR QUE SOMOS LÍDERES</span>
+                <h2 class="section-title">Engenharia em Vidro com Qualidade Incomparável</h2>
+                <p class="section-subtitle">Desenvolvido para durar décadas com o máximo conforto visual e térmico.</p>
+            </div>
+
+            <div class="differentials-grid">
+                <!-- Card 1 -->
+                <div class="diff-card glass-panel antigravity-float">
+                    <div class="diff-number">01</div>
+                    <div class="diff-icon">🌊</div>
+                    <h3>Vedação Tripla Anti-Infiltração</h3>
+                    <p>Sistema exclusivo com silicone especial e escovas de alta densidade que impedem 100% da entrada de água de chuva e poeira.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="diff-card glass-panel antigravity-float">
+                    <div class="diff-number">02</div>
+                    <div class="diff-icon">⚙️</div>
+                    <h3>Roldanas de Aço Inox Marítimo</h3>
+                    <p>Eixos blindados que não enferrujam e garantem um deslize leve e silencioso dos painéis de vidro ao longo dos anos.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="diff-card glass-panel antigravity-float">
+                    <div class="diff-number">03</div>
+                    <div class="diff-icon">🛡️</div>
+                    <h3>Vidros Temperados Certificados</h3>
+                    <p>Vidros temperados de 8mm ou 10mm fabricados rigorosamente dentro das normas ABNT NBR 16259 para máxima segurança da sua família.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="diff-card glass-panel antigravity-float">
+                    <div class="diff-number">04</div>
+                    <div class="diff-icon">🔄</div>
+                    <h3>Abertura 100% Total e Versátil</h3>
+                    <p>Abra todos os painéis recolhendo-os em um canto para aproveitar o ar puro ou feche completamente em dias de frio e chuva.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="diff-card glass-panel antigravity-float">
+                    <div class="diff-number">05</div>
+                    <div class="diff-icon">🧹</div>
+                    <h3>Instalação Limpa e Equipe Própria</h3>
+                    <p>Profissionais uniformizados, altamente capacitados e treinados. Respeito total ao seu imóvel e ao horário do condomínio.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="diff-card glass-panel antigravity-float">
+                    <div class="diff-number">06</div>
+                    <div class="diff-icon">🔒</div>
+                    <h3>Garantia Blindada de 5 Anos</h3>
+                    <p>Certificado de garantia oficial com suporte pós-venda ágil e manutenção preventiva garantida direto pela fábrica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SHOWCASE WITH REAL PHOTOGRAPHY -->
+    <section class="services-section" id="servicos">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">SOLUÇÕES EM VIDRO</span>
+                <h2 class="section-title">Conheça Nossos Serviços Especializados</h2>
+                <p class="section-subtitle">Projetos sob medida para residências, apartamentos e estabelecimentos comerciais.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card glass-panel">
+                    <div class="service-img-wrapper">
+                        <img src="assets/hero_balcony_glass.jpg" alt="Envidraçamento de Sacadas" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-tag">CARRO CHEFE</div>
+                        <h3>Envidraçamento de Sacadas</h3>
+                        <p>Ganhe um novo cômodo na sua casa. Perfeito para integração de ambientes com churrasqueira, sala ou escritório.</p>
+                        <a href="javascript:void(0)" onclick="openWhatsApp('Serviço: Sacadas')" class="service-link">Solicitar Orçamento &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card glass-panel">
+                    <div class="service-img-wrapper">
+                        <img src="assets/glass_roof.jpg" alt="Coberturas de Vidro" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-tag">PREMIUM</div>
+                        <h3>Coberturas de Vidro</h3>
+                        <p>Teto de vidro fixo ou retrátil automatizado para quintais, corredores, garagens e áreas de lazer com proteção UV.</p>
+                        <a href="javascript:void(0)" onclick="openWhatsApp('Serviço: Coberturas')" class="service-link">Solicitar Orçamento &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card glass-panel">
+                    <div class="service-img-wrapper">
+                        <img src="assets/glass_curtain.jpg" alt="Cortina de Vidro & Divisórias" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-tag">DESIGN</div>
+                        <h3>Cortina de Vidro & Divisórias</h3>
+                        <p>Divisão inteligente de ambientes internos e varandas gourmet mantendo a luminosidade natural e requinte.</p>
+                        <a href="javascript:void(0)" onclick="openWhatsApp('Serviço: Cortinas de Vidro')" class="service-link">Solicitar Orçamento &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card glass-panel">
+                    <div class="service-img-wrapper">
+                        <img src="assets/glass_railing.jpg" alt="Guarda-Corpo em Vidro" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-tag">SEGURANÇA</div>
+                        <h3>Guarda-Corpo em Vidro</h3>
+                        <p>Estruturas em alumínio e vidro laminado/temperado para sacadas, escadas e mezaninos dentro das normas de engenharia.</p>
+                        <a href="javascript:void(0)" onclick="openWhatsApp('Serviço: Guarda-Corpo')" class="service-link">Solicitar Orçamento &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF & TESTIMONIALS -->
+    <section class="reviews-section" id="depoimentos">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">QUEM COMPROU APROVA</span>
+                <h2 class="section-title">O Que Dizem Nossos Clientes no Google</h2>
+                <p class="section-subtitle">Mais de 480 avaliações com nota máxima de satisfação.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-card glass-panel">
+                    <div class="review-header">
+                        <div class="avatar-circle">RC</div>
+                        <div>
+                            <strong>Ricardo Caldas</strong>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Instalei no meu apartamento no 18º andar. Choveu forte na semana seguinte e a vedação segurou 100%! O atendimento do Grupo Veda in Glass foi impecável do orçamento à entrega."</p>
+                    <span class="review-badge">✔ Cliente Verificado Google</span>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card glass-panel">
+                    <div class="review-header">
+                        <div class="avatar-circle">MS</div>
+                        <div>
+                            <strong>Mariana Siqueira</strong>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text">"A equipe de instalação foi hiper rápida e muito limpa. O barulho da avenida diminuiu absurdamente depois que colocamos o vidro na varanda gourmet. Recomendo de olhos fechados!"</p>
+                    <span class="review-badge">✔ Cliente Verificado Google</span>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card glass-panel">
+                    <div class="review-header">
+                        <div class="avatar-circle">FA</div>
+                        <div>
+                            <strong>Fernando Almeida</strong>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Preço justo e facilidade no pagamento em 12x no cartão. Cumpriu o prazo certinho do condomínio. As roldanas deslizam com muita facilidade."</p>
+                    <span class="review-badge">✔ Cliente Verificado Google</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION (OBJECTION HANDLING ACCORDION) -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">DÚVIDAS FREQUENTES</span>
+                <h2 class="section-title">Perguntas Frequentes sobre Envidraçamento</h2>
+                <p class="section-subtitle">Tire suas dúvidas antes de solicitar o orçamento gratuito.</p>
+            </div>
+
+            <div class="faq-accordion glass-panel">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item active">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>O envidraçamento de sacada é permitido no meu condomínio?</span>
+                        <span class="faq-arrow">&ndash;</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Nossos projetos seguem estritamente as especificações de cor dos perfis, espessura de vidro e padrão aprovado pela assembleia do seu condomínio para não alterar a fachada externa.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Como funciona a vedação contra chuva e ventos fortes?</span>
+                        <span class="faq-arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Utilizamos o sistema Veda in Glass com junção de silicone de alta elasticidade e escovas com barreira de polipropileno. Esse conjunto cria uma vedação hermética protegendo móveis e pisos de infiltrações.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Qual o prazo de instalação e medição?</span>
+                        <span class="faq-arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A medição técnica no seu imóvel pode ser agendada para o mesmo dia ou no dia seguinte. Após a fabricação sob medida dos vidros temperados, a instalação é realizada em apenas 1 dia de trabalho.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Quais são as formas de pagamento disponíveis?</span>
+                        <span class="faq-arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oferecemos parcelamento em até 12x no cartão de crédito, faturamento facilitado, além de descontos especiais para pagamentos à vista via Pix ou transferência.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Como aciono a garantia de 5 anos?</span>
+                        <span class="faq-arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Você recebe um certificado de garantia oficial do Grupo Veda in Glass. Qualquer necessidade de regulagem ou assistência pós-venda é atendida com máxima prioridade pela nossa equipe técnica.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CONVERSION CTA BANNER -->
+    <section class="final-cta-section">
+        <div class="container">
+            <div class="final-cta-box glass-panel text-center">
+                <span class="pulse-badge-green">💬 ATENDIMENTO ONLINE AGORA</span>
+                <h2 class="final-cta-title">Pronto para Valorizar seu Imóvel e Ganhar Mais Espaço?</h2>
+                <p class="final-cta-desc">Fale diretamente com nossa equipe de especialistas no WhatsApp. Receba uma estimativa sem compromisso em minutos!</p>
+
+                <a href="javascript:void(0)" onclick="openWhatsApp('Banner Final CTA')" class="btn btn-whatsapp-glow btn-xl">
+                    <svg class="whatsapp-icon-lg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>FALAR NO WHATSAPP COM CONSULTOR</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="assets/logo.png" alt="Grupo Veda in Glass" class="footer-logo-img">
+                <p>Especialistas em Envidraçamento de Sacadas, Coberturas e Soluções em Vidros de Alto Padrão.</p>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; Grupo Veda in Glass - Todos os direitos reservados.</p>
+                <p class="footer-small">Página Otimizada para Vendas & Campanhas de Performance Google Ads.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE BOTTOM WHATSAPP BAR -->
+    <div class="sticky-mobile-bar">
+        <a href="javascript:void(0)" onclick="openWhatsApp('Barra Fixa Mobile')" class="sticky-mobile-btn">
+            <svg class="whatsapp-icon-sm" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span>PEDIR ORÇAMENTO GRÁTIS NO WHATSAPP</span>
+        </a>
+    </div>
+
+    <!-- FLOATING WHATSAPP BUTTON WITH BADGE -->
+    <div class="whatsapp-float">
+        <a href="javascript:void(0)" onclick="openWhatsApp('Botão Flutuante')" class="whatsapp-float-btn" title="Falar no WhatsApp">
+            <span class="whatsapp-float-tooltip">Orçamento em 15min 💬</span>
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js" defer></script>
+</body>
+</html>
