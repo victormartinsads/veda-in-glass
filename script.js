@@ -24,7 +24,7 @@ let simState = {
 function openWhatsApp(origem = 'Site Geral', customMsg = null) {
     let message = customMsg;
     if (!message) {
-        message = `Olá! Vi o anúncio do Grupo Veda in Glass no Google e gostaria de solicitar um orçamento para Envidraçamento de Sacadas (Origem: ${origem}).`;
+        message = `Olá! Vi o anúncio do Grupo Veda in Glass no Google e gostaria de solicitar um orçamento para Envidraçamento de Sacadas / Serviços em Vidro (Origem: ${origem}).`;
     }
 
     const encodedMessage = encodeURIComponent(message);
@@ -191,19 +191,6 @@ window.addEventListener('load', () => {
             duration: 1,
             delay: 0.3,
             ease: 'power3.out'
-        });
-
-        // Floating Differentials entrance
-        gsap.from('.diff-card', {
-            scrollTrigger: {
-                trigger: '.differentials-grid',
-                start: 'top 80%'
-            },
-            opacity: 0,
-            y: 40,
-            duration: 0.8,
-            stagger: 0.12,
-            ease: 'power2.out'
         });
 
         // Services entrance
