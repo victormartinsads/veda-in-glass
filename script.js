@@ -3,7 +3,7 @@
    ========================================================================== */
 
 // WhatsApp Sales Phone Number (Veda in Glass)
-const WHATSAPP_NUMBER = "5511999999999"; // Substituir com o número oficial de WhatsApp do Grupo Veda in Glass
+const WHATSAPP_NUMBER = "5519971260471";
 
 // State for Budget Simulator
 let simState = {
@@ -21,10 +21,10 @@ let simState = {
  * Conversion Label: Zop5CIC-ntIcEN7z4KJE
  * Conversion Code: AW-18326501854
  */
-function openWhatsApp(origem = 'Site Geral', customMsg = null) {
+function openWhatsApp(origem = 'Google Ads', customMsg = null) {
     let message = customMsg;
     if (!message) {
-        message = `Olá! Vi o anúncio do Grupo Veda in Glass no Google e gostaria de solicitar um orçamento para Envidraçamento de Sacadas / Serviços em Vidro (Origem: ${origem}).`;
+        message = `Olá, encontrei vocês no Google e gostaria de um orçamento.`;
     }
 
     const encodedMessage = encodeURIComponent(message);
