@@ -5,9 +5,8 @@
 // WhatsApp Sales Phone Number (Veda in Glass)
 const WHATSAPP_NUMBER = "5519971260471";
 
-// Google Apps Script Web App Endpoint (Substitua por sua URL pública do Web App do Google Sheets se gerada)
-// Exemplo: https://script.google.com/macros/s/AKfycbx.../exec
-const GOOGLE_SHEETS_WEBHOOK = "";
+// Google Apps Script Web App Endpoint para salvar leads diretamente na Planilha Google Sheets
+const GOOGLE_SHEETS_WEBHOOK = "https://script.google.com/macros/s/AKfycbwh_N4FbyVk9O_Ndryz84-SRWewSXYFNRiSOFOlToFfFQb0HZNVhQiDVFVRJWcbMQATag/exec";
 
 // State for Budget Simulator
 let simState = {
