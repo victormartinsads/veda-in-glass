@@ -5,6 +5,10 @@
 // WhatsApp Sales Phone Number (Veda in Glass)
 const WHATSAPP_NUMBER = "5519971260471";
 
+// Google Apps Script Web App Endpoint (Substitua por sua URL pública do Web App do Google Sheets se gerada)
+// Exemplo: https://script.google.com/macros/s/AKfycbx.../exec
+const GOOGLE_SHEETS_WEBHOOK = "";
+
 // State for Budget Simulator
 let simState = {
     format: "reta",
@@ -14,28 +18,127 @@ let simState = {
 };
 
 // --------------------------------------------------------------------------
-// 1. WHATSAPP & GOOGLE ADS CONVERSION TRACKING
+// 1. MODAL & LEAD FORM HANDLING (GOOGLE ADS CONVERSION + GOOGLE SHEETS)
 // --------------------------------------------------------------------------
+
+function openLeadModal(origem = 'Google Ads', defaultServico = null) {
+    const overlay = document.getElementById('leadModalOverlay');
+    const originInput = document.getElementById('leadOrigin');
+    const servicoSelect = document.getElementById('leadServico');
+
+    if (originInput) originInput.value = origem;
+    if (defaultServico && servicoSelect) {
+        servicoSelect.value = defaultServico;
+    }
+
+    if (overlay) {
+        overlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeLeadModal() {
+    const overlay = document.getElementById('leadModalOverlay');
+    if (overlay) {
+        overlay.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+}
+
+function closeLeadModalOnOverlay(event) {
+    if (event.target.id === 'leadModalOverlay') {
+        closeLeadModal();
+    }
+}
+
+function maskPhone(input) {
+    let value = input.value.replace(/\D/g, "");
+    if (value.length > 11) value = value.slice(0, 11);
+
+    if (value.length > 6) {
+        input.value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+    } else if (value.length > 2) {
+        input.value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+    } else {
+        input.value = value;
+    }
+}
+
 /**
- * Opens WhatsApp with pre-filled message and triggers Google Ads Conversion
- * Conversion Label: Zop5CIC-ntIcEN7z4KJE
- * Conversion Code: AW-18326501854
+ * Handles Form Submission:
+ * 1. Triggers Google Ads Conversion Event
+ * 2. Posts data to Google Sheets (if webhook configured)
+ * 3. Redirects lead directly to WhatsApp with pre-filled details!
+ */
+async function submitLeadForm(event) {
+    event.preventDefault();
+
+    const btnSubmit = document.getElementById('btnSubmitLead');
+    const btnText = document.getElementById('btnSubmitText');
+    const nome = document.getElementById('leadNome').value.trim();
+    const telefone = document.getElementById('leadTelefone').value.trim();
+    const servico = document.getElementById('leadServico').value;
+    const mensagem = document.getElementById('leadMensagem').value.trim();
+    const origem = document.getElementById('leadOrigin').value || 'Google Ads';
+
+    if (!nome || !telefone) return;
+
+    // Loading State
+    if (btnSubmit) btnSubmit.disabled = true;
+    if (btnText) btnText.textContent = "ENVIANDO DADOS...";
+
+    const payload = {
+        data: new Date().toLocaleString('pt-BR'),
+        nome: nome,
+        telefone: telefone,
+        servico: servico,
+        mensagem: mensagem,
+        origem: origem
+    };
+
+    // 1. Trigger Google Ads Conversion Event
+    if (typeof gtag_report_conversion === 'function') {
+        gtag_report_conversion();
+    }
+
+    // 2. Send payload to Google Sheets Web App (no-cors mode for Google Apps Script)
+    if (GOOGLE_SHEETS_WEBHOOK) {
+        try {
+            await fetch(GOOGLE_SHEETS_WEBHOOK, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+        } catch (e) {
+            console.error("Erro ao enviar dados para a planilha:", e);
+        }
+    }
+
+    // 3. Open WhatsApp with formatted lead info for immediate closing
+    const waText = `Olá, vim pelo anúncio do Google e solicitei um orçamento no site!\n` +
+                   `👤 Nome: ${nome}\n` +
+                   `📞 Telefone: ${telefone}\n` +
+                   `🛠️ Serviço: ${servico}\n` +
+                   (mensagem ? `📝 Obs: ${mensagem}\n` : '') +
+                   `Aguardando atendimento!`;
+
+    const encodedMsg = encodeURIComponent(waText);
+    const targetUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodedMsg}`;
+
+    setTimeout(() => {
+        if (btnSubmit) btnSubmit.disabled = false;
+        if (btnText) btnText.textContent = "ENVIAR E RECEBER ORÇAMENTO";
+        closeLeadModal();
+        window.open(targetUrl, '_blank');
+    }, 400);
+}
+
+/**
+ * Legacy openWhatsApp wrapper now routes or falls back
  */
 function openWhatsApp(origem = 'Google Ads', customMsg = null) {
-    let message = customMsg;
-    if (!message) {
-        message = `Olá, encontrei vocês no Google e gostaria de um orçamento.`;
-    }
-
-    const encodedMessage = encodeURIComponent(message);
-    const targetUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodedMessage}`;
-
-    // Call Google Ads conversion callback if gtag is loaded
-    if (typeof gtag_report_conversion === 'function') {
-        gtag_report_conversion(targetUrl);
-    } else {
-        window.open(targetUrl, '_blank');
-    }
+    openLeadModal(origem);
 }
 
 // --------------------------------------------------------------------------
@@ -88,13 +191,10 @@ function calculateEstimate() {
 }
 
 function sendSimulatedBudget() {
-    const msg = `Olá! Fiz uma simulação de orçamento no site do Grupo Veda in Glass:\n` +
-                `📐 Formato: ${simState.formatName}\n` +
-                `📏 Comprimento estimado: ${simState.length} metros\n` +
-                `🎨 Vidro desejado: ${simState.glassType}\n` +
-                `Gostaria de saber os valores e agendar a medição técnica!`;
-
-    openWhatsApp('Simulador de Orçamento', msg);
+    const detailMsg = `Simulação: ${simState.formatName}, ~${simState.length}m, Vidro ${simState.glassType}`;
+    const obsField = document.getElementById('leadMensagem');
+    if (obsField) obsField.value = detailMsg;
+    openLeadModal('Simulador de Orçamento', 'Envidraçamento de Sacadas');
 }
 
 // --------------------------------------------------------------------------
